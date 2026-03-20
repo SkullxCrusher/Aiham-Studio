@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>معرض الأناقة للأثاث</title>
+<style>
+body {font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:0; background:#f4f4f4; direction:rtl;}
+header {background:linear-gradient(90deg,#111,#333); color:#fff; padding:25px; text-align:center; font-size:30px; font-weight:bold; position:sticky; top:0; z-index:1000;}
+nav {display:flex; justify-content:center; gap:10px; padding:15px; background:#222; flex-wrap:wrap;}
+nav button {padding:12px 20px; background:#555; color:#fff; border:none; border-radius:5px; cursor:pointer;}
+nav button:hover {background:#25D366;}
+nav button.active {background:#25D366;}
+.container {padding:20px; display:grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
+.product-card {background:#fff; border-radius:10px; box-shadow:0 6px 15px rgba(0,0,0,0.1); overflow:hidden; transition:transform 0.3s;}
+.product-card:hover {transform:translateY(-5px);}
+.product-card img {width:100%; height:200px; object-fit:cover;}
+.product-card h3 {margin:10px 15px 0 15px; font-size:18px;}
+.product-card p.desc {padding:0 15px; font-size:14px; color:#555;}
+.product-card p.price {padding:5px 15px; font-size:16px; color:green;}
+.whatsapp-btn {display:block; text-align:center; background:#25D366; color:#fff; padding:10px; margin:10px 15px 15px; text-decoration:none; border-radius:5px;}
+.whatsapp-btn:hover {background:#1ebe57;}
+</style>
+</head>
+<body>
+
+<header>📍 معرض الأناقة للأثاث</header>
+
+<nav>
+  <button class="filter-btn active" data-category="all">كل المنتجات</button>
+  <button class="filter-btn" data-category="أثاث البيت">أثاث البيت</button>
+  <button class="filter-btn" data-category="طاولات سفرة">طاولات سفرة</button>
+  <button class="filter-btn" data-category="غرف نوم">غرف نوم</button>
+</nav>
+
+<div class="container">
+
+<!-- أثاث البيت -->
+<div class="product-card" data-category="أثاث البيت">
+  <img src="https://images.pexels.com/photos/7535031/pexels-photo-7535031.jpeg" alt="كنب مريح">
+  <h3>كنب مريح 3 مقاعد</h3>
+  <p class="desc">كنب حديث وأنيق لغرفة المعيشة.</p>
+  <p class="price">₪2500</p>
+  <a class="whatsapp-btn" href="https://wa.me/972XXXXXXXXX" target="_blank">💬 تواصل واتساب</a>
+</div>
+
+<div class="product-card" data-category="أثاث البيت">
+  <img src="https://images.pexels.com/photos/4170019/pexels-photo-4170019.jpeg" alt="أريكة زاوية">
+  <h3>أريكة زاوية</h3>
+  <p class="desc">أريكة زاوية عملية وملائمة لجميع الغرف.</p>
+  <p class="price">₪3200</p>
+  <a class="whatsapp-btn" href="https://wa.me/972XXXXXXXXX" target="_blank">💬 تواصل واتساب</a>
+</div>
+
+<div class="product-card" data-category="أثاث البيت">
+  <img src="https://images.pexels.com/photos/6315809/pexels-photo-6315809.jpeg" alt="كرسي عصري">
+  <h3>كرسي عصري</h3>
+  <p class="desc">كرسي جلدي أنيق لغرفة المعيشة.</p>
+  <p class="price">₪800</p>
+  <a class="whatsapp-btn" href="https://wa.me/972XXXXXXXXX" target="_blank">💬 تواصل واتساب</a>
+</div>
+
+<!-- طاولات سفرة -->
+<div class="product-card" data-category="طاولات سفرة">
+  <img src="https://images.pexels.com/photos/4170036/pexels-photo-4170036.jpeg" alt="طاولة سفرة خشبية">
+  <h3>طاولة سفرة خشبية</h3>
+  <p class="desc">طاولة 6 مقاعد مع تصميم عصري.</p>
+  <p class="price">₪1800</p>
+  <a class="whatsapp-btn" href="https://wa.me/972XXXXXXXXX" target="_blank">💬 تواصل واتساب</a>
+</div>
+
+<div class="product-card" data-category="طاولات سفرة">
+  <img src="https://images.pexels.com/photos/6969821/pexels-photo-6969821.jpeg" alt="طاولة مودرن">
+  <h3>طاولة مودرن</h3>
+  <p class="desc">طاولة أنيقة للغرف الصغيرة.</p>
+  <p class="price">₪1500</p>
+  <a class="whatsapp-btn" href="https://wa.me/972XXXXXXXXX" target="_blank">💬 تواصل واتساب</a>
+</div>
+
+<div class="product-card" data-category="طاولات سفرة">
+  <img src="https://images.pexels.com/photos/7195532/pexels-photo-7195532.jpeg" alt="طاولة سفرة عائلية">
+  <h3>طاولة سفرة عائلية</h3>
+  <p class="desc">طاولة كبيرة للضيوف.</p>
+  <p class="price">₪2500</p>
+  <a class="whatsapp-btn" href="https://wa.me/972XXXXXXXXX" target="_blank">💬 تواصل واتساب</a>
+</div>
+
+<!-- غرف نوم -->
+<div class="product-card" data-category="غرف نوم">
+  <img src="https://images.pexels.com/photos/3144580/pexels-photo-3144580.jpeg" alt="سرير مزدوج">
+  <h3>سرير مزدوج فاخر</h3>
+  <p class="desc">سرير خشبي مع تصميم عصري ومرتبة مريحة.</p>
+  <p class="price">₪3000</p>
+  <a class="whatsapp-btn" href="https://wa.me/972XXXXXXXXX" target="_blank">💬 تواصل واتساب</a>
+</div>
+
+<div class="product-card" data-category="غرف نوم">
+  <img src="https://images.pexels.com/photos/36411698/pexels-photo-36411698.jpeg" alt="غرفة نوم كاملة">
+  <h3>غرفة نوم كاملة</h3>
+  <p class="desc">سرير وخزانة وطاولة جانبية.</p>
+  <p class="price">₪5500</p>
+  <a class="whatsapp-btn" href="https://wa.me/972XXXXXXXXX" target="_blank">💬 تواصل واتساب</a>
+</div>
+
+<div class="product-card" data-category="غرف نوم">
+  <img src="https://images.pexels.com/photos/6035359/pexels-photo-6035359.jpeg" alt="سرير عصري">
+  <h3>سرير عصري</h3>
+  <p class="desc">تصميم عصري مع مساحة تخزين أسفل السرير.</p>
+  <p class="price">₪2800</p>
+  <a class="whatsapp-btn" href="https://wa.me/972XXXXXXXXX" target="_blank">💬 تواصل واتساب</a>
+</div>
+
+</div>
+
+<script>
+// تصفية المنتجات عبر الأزرار
+const buttons = document.querySelectorAll('.filter-btn');
+const products = document.querySelectorAll('.product-card');
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    buttons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const category = btn.getAttribute('data-category');
+    products.forEach(prod => {
+      prod.style.display = (category === 'all' || prod.getAttribute('data-category') === category) ? 'block' : 'none';
+    });
+  });
+});
+</script>
+
+</body>
+</html>
