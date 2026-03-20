@@ -1,95 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر الأثاث العربي</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Professional Furniture Catalog</title>
 </head>
 <body>
     <header>
-        <h1>Professional Furniture Catalog</h1>
-        <input type="text" id="search" placeholder="Search for furniture...">
-        <input type="number" id="minPrice" placeholder="Min Price" onchange="filterByPrice()">
-        <input type="number" id="maxPrice" placeholder="Max Price" onchange="filterByPrice()">
+        <h1>مرحبا بكم في متجر الأثاث العربي</h1>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">الرئيسية</a></li>
+                <li><a href="#">الأثاث المكتبي</a></li>
+                <li><a href="#">أثاث غرف النوم</a></li>
+                <li><a href="#">أثاث مركزي</a></li>
+                <li><a href="#">معلومات عنا</a></li>
+            </ul>
+        </nav>
     </header>
-    <main id="catalog">
-        <div class="furniture-item" style="animation: fadeIn 1s;">
-            <img src="chair.jpg" alt="Wooden Chair">
-            <h2>Wooden Chair</h2>
-            <p>Price: $100</p>
-        </div>
-        <div class="furniture-item" style="animation: fadeIn 1s;">
-            <img src="table.jpg" alt="Dining Table">
-            <h2>Dining Table</h2>
-            <p>Price: $300</p>
-        </div>
-        <div class="furniture-item" style="animation: fadeIn 1s;">
-            <img src="sofa.jpg" alt="Leather Sofa">
-            <h2>Leather Sofa</h2>
-            <p>Price: $600</p>
-        </div>
+    <main>
+        <section id="products">
+            <h2>منتجاتنا</h2>
+            <div class="product">
+                <img src="product1.jpg" alt="أثاث مكتبي">
+                <h3>مكتب عصري</h3>
+                <p>مكتب مصنوع من أفضل الخشب، يلبي احتياجاتك اليومية.</p>
+                <p>السعر: 1200 ريال</p>
+            </div>
+            <div class="product">
+                <img src="product2.jpg" alt="أثاث غرفة نوم">
+                <h3>سرير ملكي</h3>
+                <p>مع تصميم مريح وفاخر لنوم هانئ.</p>
+                <p>السعر: 2500 ريال</p>
+            </div>
+            <div class="product">
+                <img src="product3.jpg" alt="أثاث مركزي">
+                <h3>أريكة حديثة</h3>
+                <p>أريكة مريحة تناسب جميع أنواع الديكورات.</p>
+                <p>السعر: 1800 ريال</p>
+            </div>
+        </section>
     </main>
     <footer>
-        <p>&copy; 2026 Professional Furniture Catalog</p>
+        <p>جميع الحقوق محفوظة © 2026 متجر الأثاث العربي</p>
     </footer>
-    <script>
-        const filterByPrice = () => {
-            const minPrice = document.getElementById('minPrice').value;
-            const maxPrice = document.getElementById('maxPrice').value;
-            const items = document.querySelectorAll('.furniture-item');
-            items.forEach(item => {
-                const priceText = item.querySelector('p').innerText;
-                const price = parseFloat(priceText.replace('Price: $', ''));
-                if ((minPrice === '' || price >= minPrice) && (maxPrice === '' || price <= maxPrice)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        };
-    </script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        #catalog {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
-        .furniture-item {
-            margin: 10px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            background: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
-        }
-        .furniture-item:hover {
-            transform: scale(1.05);
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #333;
-            color: #fff;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-    </style>
 </body>
 </html>
