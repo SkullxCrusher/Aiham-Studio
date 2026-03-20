@@ -409,8 +409,8 @@ footer a:hover {
 <div class="search-section">
   <input type="text" id="search" class="search-box" placeholder="🔍 ابحث عن منتج...">
   <div class="price-filter-container">
-    <input type="range" id="priceFilter" class="price-filter" min="0" max="6000" step="100" value="6000">
-    <div class="price-display">السعر: <span id="priceDisplay">0</span> - 6000 ₪</div>
+    <input type="range" id="priceFilter" class="price-filter" min="800" max="5500" step="100" value="5500">
+    <div class="price-display">السعر: 800 - <span id="priceDisplay">5500</span> ₪</div>
   </div>
 </div>
 
@@ -536,7 +536,7 @@ const priceFilter = document.getElementById('priceFilter');
 const priceDisplay = document.getElementById('priceDisplay');
 
 let selectedCategory = 'all';
-let selectedPrice = 6000;
+let selectedPrice = 5500;
 
 // Update price display
 priceFilter.addEventListener('input', (e) => {
@@ -597,23 +597,6 @@ function filterProducts() {
   }
 }
 </script>
-<script>
-  const buttons = document.querySelectorAll('.filter-button');
-  const products = document.querySelectorAll('.product');
 
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      const category = button.getAttribute('data-category');
-
-      products.forEach(product => {
-        if (product.getAttribute('data-category') === category || category === 'all') {
-          product.style.display = 'block';
-        } else {
-          product.style.display = 'none';
-        }
-      });
-    });
-  });
-</script>
 </body>
 </html>
