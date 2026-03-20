@@ -25,7 +25,7 @@ header {
 
 /* HERO */
 .hero {
-  height:300px;
+  height:320px;
   background:url("https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg") center/cover;
   display:flex;
   align-items:center;
@@ -36,8 +36,9 @@ header {
 
 .hero h1 {
   background:rgba(0,0,0,0.5);
-  padding:20px;
+  padding:20px 40px;
   border-radius:10px;
+  font-size:26px;
 }
 
 /* NAV */
@@ -70,7 +71,7 @@ nav button.active {
   padding:20px;
   display:grid;
   grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-  gap:20px;
+  gap:25px;
 }
 
 .product-card {
@@ -93,16 +94,19 @@ nav button.active {
 
 .product-card h3 {
   margin:10px;
+  font-size:18px;
 }
 
 .product-card p {
   margin:0 10px 10px;
   color:#555;
+  font-size:14px;
 }
 
 .price {
   color:green;
   font-weight:bold;
+  font-size:16px;
 }
 
 .whatsapp-btn {
@@ -115,6 +119,11 @@ nav button.active {
   border-radius:8px;
   text-decoration:none;
   font-weight:bold;
+  transition:0.3s;
+}
+
+.whatsapp-btn:hover {
+  background:#1ebe57;
 }
 
 /* FOOTER */
@@ -124,6 +133,7 @@ footer {
   text-align:center;
   padding:20px;
   margin-top:20px;
+  font-size:14px;
 }
 </style>
 </head>
@@ -148,28 +158,79 @@ footer {
 <!-- PRODUCTS -->
 <div class="container">
 
+<!-- أثاث البيت -->
 <div class="product-card" data-category="أثاث البيت">
-<img src="https://images.pexels.com/photos/7535031/pexels-photo-7535031.jpeg">
-<h3>كنبايات فاخرة</h3>
-<p>تصميم عصري ومريح</p>
-<p class="price">₪2500</p>
-<a class="whatsapp-btn" href="https://wa.me/972529566989?text=مرحبا%20بدي%20استفسر%20عن%20كنبايات">💬 تواصل</a>
+  <img src="https://images.pexels.com/photos/7535031/pexels-photo-7535031.jpeg" alt="كنبايات">
+  <h3>كنبايات فاخرة</h3>
+  <p>تصميم عصري ومريح</p>
+  <p class="price">₪2500</p>
+  <a class="whatsapp-btn" href="https://wa.me/972529566989?text=مرحبا%20بدي%20استفسر%20عن%20كنبايات%20فاخرة" target="_blank">💬 تواصل</a>
+</div>
+
+<div class="product-card" data-category="أثاث البيت">
+  <img src="https://images.pexels.com/photos/4170019/pexels-photo-4170019.jpeg" alt="كنبايات">
+  <h3>كنبايات</h3>
+  <p>كنبايات ملائمة لجميع الغرف.</p>
+  <p class="price">₪3200</p>
+  <a class="whatsapp-btn" href="https://wa.me/972529566989?text=مرحبا%20بدي%20استفسر%20عن%20كنبايات" target="_blank">💬 تواصل</a>
+</div>
+
+<div class="product-card" data-category="أثاث البيت">
+  <img src="https://images.pexels.com/photos/6315809/pexels-photo-6315809.jpeg" alt="كنبايات">
+  <h3>كنبايات مميزة</h3>
+  <p>كنبايات أنيق لغرفة المعيشة.</p>
+  <p class="price">₪800</p>
+  <a class="whatsapp-btn" href="https://wa.me/972529566989?text=مرحبا%20بدي%20استفسر%20عن%20كنبايات%20مميزة" target="_blank">💬 تواصل</a>
+</div>
+
+<!-- طاولات سفرة -->
+<div class="product-card" data-category="طاولات سفرة">
+  <img src="https://images.pexels.com/photos/4170036/pexels-photo-4170036.jpeg" alt="طاولة سفرة خشبية">
+  <h3>طاولة سفرة</h3>
+  <p>طاولة تصميم عصري.</p>
+  <p class="price">₪1800</p>
+  <a class="whatsapp-btn" href="https://wa.me/972529566989?text=مرحبا%20بدي%20استفسر%20عن%20طاولة%20سفرة" target="_blank">💬 تواصل</a>
 </div>
 
 <div class="product-card" data-category="طاولات سفرة">
-<img src="https://images.pexels.com/photos/4170036/pexels-photo-4170036.jpeg">
-<h3>طاولة سفرة</h3>
-<p>تصميم أنيق للبيت</p>
-<p class="price">₪1800</p>
-<a class="whatsapp-btn" href="https://wa.me/972529566989?text=مرحبا%20بدي%20استفسر%20عن%20طاولة%20سفرة">💬 تواصل</a>
+  <img src="https://images.pexels.com/photos/6969821/pexels-photo-6969821.jpeg" alt="طاولة مودرن">
+  <h3>طاولة مودرن</h3>
+  <p>طاولة أنيقة.</p>
+  <p class="price">₪1500</p>
+  <a class="whatsapp-btn" href="https://wa.me/972529566989?text=مرحبا%20بدي%20استفسر%20عن%20طاولة%20مودرن" target="_blank">💬 تواصل</a>
+</div>
+
+<div class="product-card" data-category="طاولات سفرة">
+  <img src="https://images.pexels.com/photos/7195532/pexels-photo-7195532.jpeg" alt="طاولة سفرة عائلية">
+  <h3>طاولة سفرة عائلية</h3>
+  <p>طاولة كبيرة للضيوف.</p>
+  <p class="price">₪2500</p>
+  <a class="whatsapp-btn" href="https://wa.me/972529566989?text=مرحبا%20بدي%20استفسر%20عن%20طاولة%20سفرة%20عائلية" target="_blank">💬 تواصل</a>
+</div>
+
+<!-- غرف نوم -->
+<div class="product-card" data-category="غرف نوم">
+  <img src="https://images.pexels.com/photos/3144580/pexels-photo-3144580.jpeg" alt="سرير مزدوج">
+  <h3>سرير مزدوج فاخر</h3>
+  <p>سرير خشبي مع تصميم عصري ومرتبة مريحة.</p>
+  <p class="price">₪3000</p>
+  <a class="whatsapp-btn" href="https://wa.me/972529566989?text=مرحبا%20بدي%20استفسر%20عن%20سرير%20مزدوج" target="_blank">💬 تواصل</a>
 </div>
 
 <div class="product-card" data-category="غرف نوم">
-<img src="https://images.pexels.com/photos/3144580/pexels-photo-3144580.jpeg">
-<h3>سرير فاخر</h3>
-<p>راحة وجودة عالية</p>
-<p class="price">₪3000</p>
-<a class="whatsapp-btn" href="https://wa.me/972529566989?text=مرحبا%20بدي%20استفسر%20عن%20غرفة%20نوم">💬 تواصل</a>
+  <img src="https://images.pexels.com/photos/36411698/pexels-photo-36411698.jpeg" alt="غرفة نوم كاملة">
+  <h3>غرفة نوم مميزة</h3>
+  <p>سرير مميز.</p>
+  <p class="price">₪5500</p>
+  <a class="whatsapp-btn" href="https://wa.me/972529566989?text=مرحبا%20بدي%20استفسر%20عن%20غرفة%20نوم%20مميزة" target="_blank">💬 تواصل</a>
+</div>
+
+<div class="product-card" data-category="غرف نوم">
+  <img src="https://images.pexels.com/photos/6035359/pexels-photo-6035359.jpeg" alt="سرير عصري">
+  <h3>سرير عصري</h3>
+  <p>تصميم عصري مع مساحة تخزين أسفل السرير.</p>
+  <p class="price">₪2800</p>
+  <a class="whatsapp-btn" href="https://wa.me/972529566989?text=مرحبا%20بدي%20استفسر%20عن%20سرير%20عصري" target="_blank">💬 تواصل</a>
 </div>
 
 </div>
@@ -186,7 +247,7 @@ footer {
 </span>
 
 <br><br>
-<a href="https://wa.me/972529566989?text=مرحبا%20بدي%20موقع%20مثل%20هذا">
+<a class="whatsapp-btn" href="https://wa.me/972529566989?text=مرحبا%20بدي%20موقع%20مثل%20هذا" target="_blank">
 💻 اطلب موقع مثلك
 </a>
 
